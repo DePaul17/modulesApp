@@ -1,0 +1,42 @@
+.image-and-text {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-stop {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn-stop:hover {
+    background-color: #5a6268;
+}
+
+
+.custom-dropdown-btn {
+    background-color: transparent; 
+    border: none;                 
+    padding: 0;
+    box-shadow: none; 
+    outline: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.custom-dropdown-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown-btn img {
+    display: block;
+}
