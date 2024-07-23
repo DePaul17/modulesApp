@@ -7,6 +7,15 @@ Une fois le projet télécharger ou cloner, pour l'installer il suffit de tapes 
 
 - php artisan migrate, pour appliquer les migrations de base de données définies dans votre projet Laravel, créant ou modifiant les tables et les colonnes nécessaires selon les schémas définis.
 
+## Création des seeders
+
+Pour avoir accès à l'appplication via un user par défaut il faut taper la commande : 
+- php artisan db:seed, Pour inserer des données initiales dans la base de données en exécutant les seeders définis dans votre projet Laravel.
+
+- Une fois le seeder crée avec succès, les identidinats pour se connecter sont : 
+email->"root@modapp.tech"
+password->"root"
+
 ## Configuration du fichier d'environnement
 
 -   DB_CONNECTION=mysql
