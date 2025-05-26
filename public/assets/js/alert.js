@@ -10,7 +10,7 @@ setTimeout(function() {
     if (errorAlert) {
       errorAlert.style.display = 'none';
     }
-  }, 3000);
+  }, 5000);
 
 function confirmDelete() {
   return confirm("Êtes-vous sûr de vouloir supprimer ce module ?");

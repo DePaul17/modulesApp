@@ -54,7 +54,7 @@ class DetailController extends Controller
         $labels = $details->pluck('number_data_sent');
         $values = $details->pluck('number_data_sent'); 
     
-        return view('ui-chart', [
+        return view('user.ui-chart', [
             'labels' => $labels,
             'values' => $values,
             'module' => $module 

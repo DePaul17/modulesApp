@@ -21,4 +21,9 @@ class Module extends Model
     {
         return $this->hasOne(Detail::class);
     }
+
+    public function details()
+    {
+        return $this->hasMany(Detail::class);
+    }
 }

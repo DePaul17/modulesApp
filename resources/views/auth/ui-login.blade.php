@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/logo.png') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/monitorA.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles_order.css') }}" />
 </head>
 
 <body>
-    <div class="d-flex justify-content-center align-items-center min-vh-100">
-        <div class="card" style="width: 26rem;">
+    <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div class="card shadow" style="width: 26rem;">
             <div class="card-header text-center">
                 Se connecter
             </div>
@@ -31,7 +32,7 @@
                             <input type="checkbox" class="form-check-input" id="remember_me" name="remember_me">
                             <label class="form-check-label" for="remember_me">Se souvenir de moi</label>
                         </div>
-                        <a href="{{ route('forget.password.get') }}" class="btn btn-link">Mot de passe oublié ?</a>
+                        <!-- <a href="#" class="btn btn-link">Mot de passe oublié ?</a> -->
                     </div>
                     <hr>
                     <div class="text-end">
@@ -40,6 +41,17 @@
                 </form>
             </div>
         </div>
+
+        @if ($errors->any())
+        <div id="errorAlert" class="alert alert-danger mt-3 text-center shadow" style="width: 26rem;">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
     </div>
 </body>
+
 </html>

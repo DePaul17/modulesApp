@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ModulesApp</title>
-  <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/logo.png') }}" />
+  <title>MonitorA</title>
+  <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logos/monitorA.png') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/styles.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/styles_order.css') }}" />
 </head>
@@ -22,11 +22,11 @@
 
       <div class="container-fluid">
         <div class="container-fluid">
-          <div class="card">
+          <div class="card shadow">
             <div class="card-body">
               <h5 class="card-title fw-semibold mb-4">Nouveau module</h5>
               <div class="card">
-                <div class="card-body">
+                <div class="card-body shadow">
                   <form id="form-add" method="POST" action="{{ route('modules.add') }}">
                     @csrf
                     <div class="mb-3">

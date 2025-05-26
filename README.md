@@ -28,3 +28,18 @@ password->"root"
 ## Lancement du projet
 
 Pour lancer le projet il faut taper la commande : php artisan serve
+
+
+## Taches pour améliorer le projet
+
+1.Envoyer automatiquement un mail, quand un module tombe en panne aux utilisateurs.
+
+2.Rajouter les identifiants pour tous les membres du groupes dans le seeders.
+
+3.Empecher la page de se recharger avec force. SI POSSIBLE
+
+4.Côté Admin : 
+    Gestion des utilisateurs et des modules, 
+    Voir et les Historiques.
+    Partie des bugs
+    Ajouter un lien en bas pour mettre à l'admin de basculer en tant qu'utilisateur Classic et revenir en tant qu'admin.

@@ -16,10 +16,20 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        //ADMINISTRATEUR
         User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'root@modapp.tech',
+            'name' => 'Admin AgroPro',
+            'email' => 'root@agropro.com',
             'password' => Hash::make('root'),
+            'role' => 1, // Un utilisateur admin
+        ]);
+
+        //USER
+        User::factory()->create([
+            'name' => 'De Paul MOUYABI',
+            'email' => 'guy-vincent-de-paul.mouyabi@mediaschool.me',
+            'password' => Hash::make('passer123'),
+            'role' => 2, // Un utilisateur classique (non-admin)
         ]);
     }
 }

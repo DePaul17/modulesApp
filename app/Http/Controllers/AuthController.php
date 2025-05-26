@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         // Validation des données du formulaire
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
@@ -26,8 +27,18 @@ class AuthController extends Controller
         $remember_me = $request->has('remember_me');
 
         if (Auth::attempt($credentials, $remember_me)) {
-            // Si l'authentification réussie
-            return redirect()->intended('dashboard');
+            // Récupérer l'utilisateur authentifié
+            $user = Auth::user();
+
+            // Rediriger en fonction du rôle
+            if ($user->role == 1) {
+                return redirect()->route('dashboard.admin');
+            } elseif ($user->role == 2) {
+                return redirect()->route('dashboard.user');
+            }
+
+            // Valeur par défaut si le rôle n'est pas reconnu
+            return redirect()->route('home');
         }
 
         // Si l'authentification échoue

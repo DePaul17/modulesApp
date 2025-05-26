@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            // 1 pour administrateur et 2 pour simple utilisareur et 3 pour invités
+            $table->integer('role'); // Par défaut tous les users sont invités à 3
             $table->rememberToken();
             $table->timestamps();
         });
